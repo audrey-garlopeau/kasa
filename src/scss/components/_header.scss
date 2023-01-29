@@ -1,0 +1,28 @@
+.header {
+    @include flex(row, space-between);
+    margin: 20px;
+
+    @include desktop {
+        margin: 40px 0 60px 0;
+    }
+
+    &__link--logo {
+        width: 145px;
+
+        @include small-smartphone {
+            width: 130px;
+        }
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include laptop {
+            width: 100%;
+        }
+
+        @include desktop {
+            width: 100%;
+        }
+    }
+};

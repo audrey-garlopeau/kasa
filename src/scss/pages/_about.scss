@@ -1,0 +1,29 @@
+.about {
+    margin: 20px;
+
+    @include desktop {
+        margin: 0 0 30px 0;
+
+    }
+
+    &__accordion {
+        @include flex(column);
+        gap: 20px;
+
+        @include desktop {
+            margin-top: 20px;
+            gap: 30px;
+        }
+    }
+
+}
+
+@for $i from 1 through 30 {
+    .about:nth-child(#{$i}n) {
+        @include desktop {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: #{$i * 0.1}s;
+        }
+    }
+}

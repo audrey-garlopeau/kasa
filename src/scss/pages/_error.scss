@@ -1,0 +1,39 @@
+.error {
+    margin: 20px;
+    @include flex(column);
+    text-align: center;
+    flex-grow: 1;
+    
+    
+    &__number {
+        color: $primary-color;
+        font-size: 6rem;
+        font-weight: 700;
+
+        @include desktop {
+            font-size: 18rem;
+        }
+    }
+
+    &__text {
+        color: $primary-color;
+        font-size: 1.125rem;
+        @include desktop {
+            font-size: 2.25rem;
+        }
+    }
+
+    &__link {
+        color: $primary-color;
+        font-size: 0.875rem;
+        text-decoration: underline;
+        margin-top: 133px;
+
+        @include desktop {
+            font-size: 1.125rem;
+            margin-top: 182px;
+            margin-bottom: 159px;
+        }
+
+    }
+}

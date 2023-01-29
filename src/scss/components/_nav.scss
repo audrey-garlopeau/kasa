@@ -1,0 +1,66 @@
+.navbar {
+    @include flex(row, space-between);
+    gap: 15px;
+
+    @include small-smartphone {
+        gap: 10px;
+    }
+
+    @include tablet {
+        gap: 30px;
+    }
+
+    @include laptop {
+        gap: 40px;
+    }
+
+    @include desktop {
+        gap: 60px;
+    }
+
+    &__link {
+        color: $primary-color;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        position: relative;
+
+        @include tablet {
+            font-size: 1rem;
+            text-transform: initial;
+        }
+
+        @include laptop {
+            font-size: 1rem;
+            text-transform: initial;
+        }
+
+        @include desktop {
+            font-size: 1.5rem;
+            text-transform: initial;
+        }
+
+        &::after {
+            content: "";
+            @include large-border-radius;
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: $primary-color;
+            transform-origin: bottom right;
+            transition: transform 400ms ease-out;
+
+            @include desktop {
+                height: 2px;
+            }
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+    }
+}

@@ -1,0 +1,52 @@
+.host {
+    @include flex(row, flex-end, center);
+
+    &__name {
+        @include flex(row, flex-end);
+        width: 50%;
+        color: $primary-color;
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-align: right;
+        margin-right: 0;
+
+        @include tablet {
+            font-size: 0.875rem;
+            margin-right: 10px;
+        }
+
+        @include laptop {
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        @include desktop {
+            font-size: 1.125rem;
+            margin-right: 10px;
+        }
+    }
+
+    &__picture {
+
+        display: flex;
+        margin-left: 10px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #c4c4c4;
+
+        @include tablet {
+            width: 48px;
+            height: 48px;
+        }
+
+        @include desktop {
+            width: 64px;
+            height: 64px;
+        }
+
+        .host__photo {
+            border-radius: inherit;
+        }
+    }
+}

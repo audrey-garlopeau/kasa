@@ -1,0 +1,12 @@
+.rating {
+    &__star {
+        margin-top: 5px;
+        width: 18px;
+        height: 18px;
+
+        @include desktop {
+            width: 36px;
+            height: 36px;
+        }
+    }
+}

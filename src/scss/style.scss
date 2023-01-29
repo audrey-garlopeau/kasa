@@ -1,0 +1,8 @@
+@import './base/reset', './base/typography';
+
+@import './utils/variables', './utils/mixins', './utils/keyframes';
+
+@import './components/header', './components/nav', './components/heroBanner', './components/footer', './components/thumbnail', 
+'./components/slideshow', './components/tag', './components/accordion', './components/rating', './components/host', './components/banner';
+
+@import './pages/home', './pages/accommodation', './pages/about', './pages/error';

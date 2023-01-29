@@ -1,0 +1,82 @@
+.accommodation {
+    margin: 20px;
+
+    &__content {
+        margin: 15px 0;
+
+        @include desktop {
+            @include flex(row, space-between, flex-start);
+            margin: 24px 0;
+        }
+    }
+
+    &__location-tag {
+        @include flex(column, flex-start, flex-start);
+        gap: 10px;
+
+    }
+
+    &__title {
+        color: $primary-color;
+        font-size: 1.125rem;
+        width: 80%;
+
+        @include tablet{
+            width: 100%;
+            font-size: 1.5rem;
+        }
+
+        @include desktop {
+            width: 100%;
+            font-size: 2rem;
+        }
+    }
+
+    &__location {
+        color: $primary-color;
+        font-size: 0.875rem;
+
+        @include tablet {
+            font-size: 1rem;
+        }
+
+        @include desktop {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__tags {
+        @include flex(row, flex-start);
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__host-rating {
+        margin: 20px 0;
+        @include flex(row, space-between);
+
+        @include desktop {
+            @include flex(column-reverse, flex-start, flex-start);
+        }
+    }
+
+    &__accordion {
+        @include flex(column, flex-start, flex-start);
+        gap: 20px;
+
+        @include tablet {
+            @include flex(row, flex-start, flex-start);
+            gap: 50px;
+        }
+
+        @include laptop {
+            @include flex(row, flex-start, flex-start);
+            gap: 60px;
+        }
+
+        @include desktop {
+            @include flex(row, flex-start, flex-start);
+            gap: 76px;
+        }
+    }
+}

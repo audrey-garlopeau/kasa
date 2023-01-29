@@ -1,0 +1,22 @@
+.footer {
+    @include flex(column);
+    gap: 20px;
+    height: 210px;
+    width: 100%;
+    background-color: $footer-color;
+
+    @include desktop {
+        gap: 40px;
+
+        &__logo {
+            margin-top: 50px;
+        };
+    };
+
+    &__copyright {
+        text-align: center;
+        color: $secondary-color;
+    };
+
+
+};

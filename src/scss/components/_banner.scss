@@ -1,0 +1,31 @@
+.banner {
+    @include medium-border-radius;
+    @include flex(row, center);
+    position: relative;
+    height: 223px;
+    margin-bottom: 20px;
+    background-image: url(/assets/images/about_mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include desktop {
+        background-image: url(/assets/images/about_desktop.jpg);
+    }
+
+
+    @include desktop {
+        @include flex;
+        @include large-border-radius;
+        margin: 0;
+        height: 223px;
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #0000004D;
+        border-radius: inherit;
+    }
+}
