@@ -14,7 +14,7 @@ export default function RouterPath() {
                 <div className="container">
                     <Header />
                     <Routes>
-                        <Route exact path="kasa/" element={<Home />} />
+                        <Route exact path="kasa" element={<Home />} />
                         <Route exact path="/" element={<Home />} />
                         <Route exact path="accommodations/:id" element={<Accommodation />} />
                         <Route exact path="about" element={<About />} />
